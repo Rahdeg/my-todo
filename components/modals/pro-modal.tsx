@@ -24,7 +24,7 @@ export const ProModal = () => {
   const onClick = () => {
     execute({});
   };
-  
+
   return (
     <Dialog
       open={proModal.isOpen}
@@ -60,6 +60,13 @@ export const ProModal = () => {
             className="w-full"
             variant="primary"
           >
+            {isLoading && <div className="w-5 h-5 relative animate-spin px-8">
+              <Image
+                alt="logo"
+                src='/logo.svg'
+                fill
+              />
+            </div>}
             Upgrade
           </Button>
         </div>
